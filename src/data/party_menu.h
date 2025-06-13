@@ -603,6 +603,17 @@ static const struct WindowTemplate sFollowerSetWindowTemplate =
     .baseBlock = 0x39D,
 };
 
+static const struct WindowTemplate sFollowerSetReturnWindowTemplate =
+{
+    .bg = 2,
+    .tilemapLeft = 23,
+    .tilemapTop = 13,
+    .width = 6,
+    .height = 6,
+    .paletteNum = 14,
+    .baseBlock = 0x39D,
+};
+
 // Plain tilemaps for party menu slots.
 // The versions with no HP bar are used by eggs, and in certain displays like registering at a battle facility.
 // There is no empty version of the main slot because it shouldn't ever be empty.

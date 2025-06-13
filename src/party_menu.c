@@ -2725,6 +2725,9 @@ static u8 DisplaySelectionWindow(u8 windowType)
     case SELECTWINDOW_FOLLOWER:
         window = sFollowerSetWindowTemplate;
         break;
+    case SELECTWINDOW_FOLLOWER_RETURN:
+        window = sFollowerSetReturnWindowTemplate;
+        break;
     case SELECTWINDOW_MAIL:
         window = sMailReadTakeWindowTemplate;
         break;
@@ -3041,7 +3044,7 @@ static void CursorCb_Follower(u8 taskId)
         else
         {
             SetPartyMonSelectionActions(gPlayerParty, gPartyMenu.slotId, ACTIONS_FOLLOWER_UNSET_RETURN);
-            DisplaySelectionWindow(SELECTWINDOW_ITEM);
+            DisplaySelectionWindow(SELECTWINDOW_FOLLOWER_RETURN);
         }
     }
     else if (gPartyMenu.slotId == 0 && gSaveBlock3Ptr->followerIndex == OW_FOLLOWER_NOT_SET)
@@ -3054,7 +3057,7 @@ static void CursorCb_Follower(u8 taskId)
         else
         {
             SetPartyMonSelectionActions(gPlayerParty, gPartyMenu.slotId, ACTIONS_FOLLOWER_SET_RETURN);
-            DisplaySelectionWindow(SELECTWINDOW_ITEM);
+            DisplaySelectionWindow(SELECTWINDOW_FOLLOWER_RETURN);
         }
     }
     else
@@ -3062,7 +3065,7 @@ static void CursorCb_Follower(u8 taskId)
         if (mon == GetFirstLiveMon() && gSaveBlock3Ptr->followerIndex == OW_FOLLOWER_NOT_SET)
         {
             SetPartyMonSelectionActions(gPlayerParty, gPartyMenu.slotId, ACTIONS_FOLLOWER_SET_RETURN);
-            DisplaySelectionWindow(SELECTWINDOW_ITEM);
+            DisplaySelectionWindow(SELECTWINDOW_FOLLOWER_RETURN);
         }
         else
         {
