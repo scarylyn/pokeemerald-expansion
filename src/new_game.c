@@ -61,10 +61,9 @@ EWRAM_DATA bool8 gDifferentSaveFile = FALSE;
 EWRAM_DATA bool8 gEnableContestDebugging = FALSE;
 
 static const struct ContestWinner sContestWinnerPicDummy =
-{
-    .monName = _(""),
-    .trainerName = _("")
-};
+    {
+        .monName = _(""),
+        .trainerName = _("")};
 
 void SetTrainerId(u32 trainerId, u8 *dst)
 {
@@ -213,6 +212,7 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+    gSaveBlock3Ptr->followerIndex = OW_FOLLOWER_NOT_SET;
 }
 
 static void ResetMiniGamesRecords(void)

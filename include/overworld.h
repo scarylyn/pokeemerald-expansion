@@ -24,12 +24,15 @@
 #define MOVEMENT_MODE_FROZEN 1
 #define MOVEMENT_MODE_SCRIPTED 2
 
-#define SKIP_OBJECT_EVENT_LOAD  1
+#define SKIP_OBJECT_EVENT_LOAD 1
 
 // trigger a time-of-day blend once
 #define HOURS_BLEND_ONCE 25
 // don't update gTimeBlend
 #define HOURS_FREEZE_BLEND 26
+
+#define OW_FOLLOWER_NOT_SET 0xFE
+#define OW_FOLLOWER_RECALLED 0xFF
 
 struct InitialPlayerAvatarState
 {
